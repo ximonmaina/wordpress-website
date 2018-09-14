@@ -1,0 +1,225 @@
+h3.widget-title {
+    margin-bottom: $small__spacing;
+    @include padding(0 0 $small__spacing/2 0);
+    position: relative;
+}
+.widget-area{
+    @include padding($base__spacing);
+    h3.widget-title {
+        &:before {
+            position: absolute;
+            margin: auto;
+            z-index: 1;
+            content: "";
+            width: 25%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+.widget {
+    @include margin(0 0 $base__spacing 0);
+    @include padding(0);
+    position: relative;
+  	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+    ul {
+        list-style: none;
+        margin: 0;
+        li {
+            padding:0;
+            &:first-child {
+                border-top: none;
+            }
+            a {
+                display:block;
+            }
+            ul {
+                li {
+                    margin: 0;
+                    padding: 0;
+                }
+            } 
+        }
+    }
+}
+.header-widget-region {
+    @include margin(0 -99em);
+    @include padding($base__spacing (99em));
+    display:block;
+    &:empty {
+        display: none;
+    }
+    .widget {
+        padding-right: $base__spacing;
+        padding-left: $base__spacing;
+    }
+}
+.footer-widget-region {
+    @include margin(0 null);
+    @include padding($base__spacing);
+    width: 100%;
+    h3.widget-title {
+        margin-bottom: 0;
+        @include padding(0 0 $small__spacing/2 0);
+    }
+}
+
+//categories and archives
+.widget_archive,
+.widget_categories {
+    ul {
+        li {
+        }
+    }
+}
+//recent posts
+.widget_recent_entries {
+    ul {
+        li {
+        }
+    }
+}
+//recent comments
+.widget_recent_comments {
+    ul {
+        li {
+        }
+    }
+}
+//menu
+.widget_nav_menu {
+    a {
+        padding: $small__spacing/2 $small__spacing;
+        border: 1px solid #ccc;
+        margin-top: -1px;
+    }
+    ul {
+        ul {
+            ul { 
+                a {
+                    &:before {
+                        content: '•';
+                        margin-right: 5px;
+                        @include opacity(0.2);
+                    }
+                }
+                ul {
+                    a {
+                        &:before {
+                            content: '• •';
+                            margin-right: 5px;
+                            @include opacity(0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//calendar 
+.widget_calendar {
+    #wp-calendar {
+        th, td {
+        }
+    }
+}
+//tag 
+.widget_tag_cloud {
+    a {
+        font-size: 9pt !important;
+        background:$color__light-gray;
+        margin: 2px 0 2px 2px;
+        padding: 4px 8px;
+        display: inline-block;
+    }
+    
+}
+//search
+.widget_search {
+    input.search-field {
+        width: 50%;
+    }
+}
+.widget select {
+    max-width: 100%;
+}
+
+//premim widgets
+.ig-recent-posts-widget {
+    li {
+        clear: both;
+        margin-bottom: $small__spacing/2;
+    }
+    .post-image {
+        float: left;
+        margin: 0 10px 5px 0;
+        width: 50px;
+        height: auto;
+    }
+    .post-date,
+    .post-excerpt {
+        font-size: .9em;
+    }
+    .post-excerpt {
+        display: block;
+    }
+}
+.ig-social-widget {
+    a {
+        display: block;
+        margin: 5px 0;
+        padding: 8px 10px;
+        color:#fff!important;
+        @include border-radius(2px);
+        .text {
+            margin-left: 10px;
+        }
+        &:hover {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+            filter: alpha(opacity=80);
+            -moz-opacity: 0.8;
+            -khtml-opacity: 0.8;
+            opacity: 0.8;
+        }
+    }
+    .facebook {
+        background: #3b5998;
+        border-color: darken(#3b5998,5%);
+    }
+    .twitter {
+        background: #55acee;
+        border-color: darken(#55acee,5%);
+    }
+    .google {
+        background: #dd4b39;
+        border-color: darken(#dd4b39,5%);
+    }
+    .youtube {
+        background: #cd201f;
+        border-color: darken(#cd201f,5%);
+    }
+    .linkedin {
+        background: #007bb5;
+        border-color: darken(#007bb5,5%);
+    }
+    .instagram {
+        background: #e4405f;
+        border-color: darken(#e4405f,5%);
+    }
+    .pinterest {
+        background: #cb2027;
+        border-color: darken(#cb2027,5%);
+    }
+    .tumblr {
+         background: #32506d;
+         border-color: darken(#32506d,5%);
+    }
+    .dribbble {
+         background: #ea4c89;
+         border-color: darken(#ea4c89,5%);
+    }
+}

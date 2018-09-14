@@ -1,0 +1,25 @@
+// Grid
+@include media(769px) {
+    .grid-container {
+         @include outer-container;
+    }
+    .col2 {
+        @include span-columns(6);
+        @include omega(2n);
+    }
+    .col3 {
+        @include span-columns(4);
+        @include omega(3n);
+    }
+    .col4 {
+        @include span-columns(3);
+        @include omega(4n);
+    }
+    .omega {
+        @include omega();
+    }
+    .focused {
+        padding-left: 9em;
+        padding-right: 9em;
+    }
+}

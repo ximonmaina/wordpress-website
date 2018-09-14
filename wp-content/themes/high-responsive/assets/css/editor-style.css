@@ -1,0 +1,848 @@
+/*
+Theme Name: High Responsive
+Description: Used to style the TinyMCE editor.
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Body
+ * 2.0 - Typography
+ * 3.0 - Elements
+ * 4.0 - Padding/Margin
+ * 5.0 - Forms
+ * 6.0 - Links
+ * 7.0 - Alignment
+ * 8.0 - Caption
+ * 9.0 - Galleries
+ * 10.0 - Audio / Video
+ * 11.0 - Media Queries
+ * 12.0 - RTL
+ */
+
+
+/**
+ * 1.0 - Body
+ */
+
+body {
+	margin: 30px;
+	max-width: 1036px;
+	vertical-align: baseline;
+}
+
+/**
+ * 2.0 - Typography
+ */
+
+body,
+button,
+input,
+select,
+textarea,
+.site-title,
+.widget .widget-title,
+.required {
+	font-family: 'Lato', sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #777;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.75;
+}
+
+.drop-cap:first-letter {
+	font-size: 106px;
+	font-size: 6.625rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	color: #1a1a1a;
+	font-weight: 400;
+	line-height: 1.4;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.post-navigation .nav-title,
+#testimonial-section .section-content-wrap:before,
+.drop-cap:first-letter{
+	font-family: 'Playfair Display', serif;
+}
+
+h1,
+.mce-content-body h1 {
+	font-size: 28px;
+	font-size: 1.75rem;
+	line-height: 1.25;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+h2,
+.mce-content-body h2 {
+	font-size: 23px;
+	font-size: 1.4375rem;
+	line-height: 1.2173913043;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+h3,
+.mce-content-body h3 {
+	font-size: 19px;
+	font-size: 1.1875rem;
+	line-height: 1.1052631579;
+	margin-top: 2.9473684211em;
+	margin-bottom: 1.4736842105em;
+}
+
+h4,
+.mce-content-body h4,
+h5,
+.mce-content-body h5,
+h6,
+.mce-content-body h6 {
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.3125;
+	margin-top: 3.5em;
+	margin-bottom: 1.75em;
+}
+
+.wp-caption .wp-caption-text {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border: 0 solid #1a1a1a;
+	border-left-width: 4px;
+	color: #777;
+	font-size: 19px;
+	font-size: 1.1875rem;
+	font-style: italic;
+	line-height: 1.4736842105;
+	margin: 0 0 1.4736842105em;
+	overflow: hidden;
+	padding: 0 0 0 1.263157895em;
+}
+
+blockquote,
+q {
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+}
+
+blockquote p {
+	margin-bottom: 1.4736842105em;
+}
+
+blockquote cite,
+blockquote small {
+	color: #1a1a1a;
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+}
+
+blockquote cite:before,
+blockquote small:before {
+	content: "\2014\00a0";
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote strong,
+blockquote b {
+	font-weight: 400;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
+address {
+	font-style: italic;
+	margin: 0 0 1.75em;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+	font-family: Inconsolata, monospace;
+}
+
+pre {
+	background-color: #f2f2f2;
+	line-height: 1.3125;
+	margin: 0 0 1.75em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.75em;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+code {
+	background-color: #eee;
+	padding: 0.125em 0.25em;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #eee;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #4686cc;
+	color: #fff;
+	padding: 0.125em 0.25em;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+
+/**
+ * 3.0 - Elements
+ */
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+hr {
+	background-color: #eee;
+	border: 0;
+	height: 1px;
+	margin: 0 0 1.75em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.75em 1.25em;
+	padding: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+	margin-left: 1.5em;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dl {
+	margin: 0 0 1.75em;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.75em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+	vertical-align: middle;
+}
+
+del {
+	opacity: 0.8;
+}
+
+table,
+.mce-item-table {
+	border-collapse: separate;
+	border-spacing: 0;
+	margin: 0 0 1.75em;
+	table-layout: fixed;
+	/* Prevents HTML tables from becoming too wide */
+	width: 100%;
+}
+
+thead th,
+.mce-item-table th {
+	border-bottom: 1px solid #eee;
+}
+
+caption,
+th,
+.mce-item-table th,
+td,
+.mce-item-table td {
+	font-weight: normal;
+	text-align: left;
+}
+
+th,
+.mce-item-table th {
+	font-weight: 700;
+}
+
+td,
+.mce-item-table td {
+}
+
+th,
+.mce-item-table th,
+td,
+.mce-item-table td {
+	padding: 0.4375em;
+}
+
+table tr:nth-child(2n),
+.mce-item-table tr:nth-child(2n) {
+	background-color: #fafafa;
+}
+
+.displaynone {
+	display: none;
+}
+
+.displayblock {
+	display: block;
+}
+
+.cover-link {
+	display: block;
+	height: 100%;
+}
+
+.drop-cap:first-letter {
+	float: left;
+	line-height: 0.6;
+	margin: 11px 16px 6px -3px;
+}
+
+
+/**
+ * 4.0 - Padding/Margin
+ */
+
+
+.wp-caption .wp-caption-text {
+	padding: 7px 14px;
+}
+
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	padding: 14px 31px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	padding: 14px 21px;
+}
+
+
+/**
+ * 5.0 - Forms
+ */
+
+input {
+	line-height: normal;
+}
+
+button,
+button[disabled]:hover,
+button[disabled]:focus,
+.button,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus {
+	background-color: transparent;
+	border: 1px solid #4686cc;
+	color: #4686cc;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.button, 
+.button {
+	box-shadow: none;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #4686cc;
+	color: #fff;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+	outline: thin dotted;
+	outline-offset: -4px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+	background: #f8f8f8;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	border: 1px solid #eee;
+	border-radius: 2px;
+	color: #777;
+	width: 100%;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+	background-color: #fff;
+	border-color: #4686cc;
+	color: #1a1a1a;
+	outline: 0;
+}
+
+
+/**
+ * 6.0 - Links
+ */
+
+a {
+	box-shadow: 0 1px 0 0 currentColor;
+	color: #4686cc;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	box-shadow: none;
+	color: #686868;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+
+/**
+ * 7.0 - Alignment
+ */
+
+.alignleft {
+	float: left;
+	margin: 0.375em 1.75em 1.75em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.375em 0 1.75em 1.75em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto 1.75em;
+}
+
+blockquote.alignleft {
+	margin: 0.3157894737em 1.4736842105em 1.473684211em 0;
+}
+
+blockquote.alignright {
+	margin: 0.3157894737em 0 1.473684211em 1.4736842105em;
+}
+
+blockquote.aligncenter {
+	margin-bottom: 1.473684211em;
+}
+
+
+/**
+ * 8.0 - Caption
+ */
+
+.wp-caption {
+	margin-bottom: 1.75em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+
+.wp-caption .wp-caption-text {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #686868;
+	font-style: italic;
+}
+
+
+/**
+ * 9.0 - Galleries
+ */
+
+.mce-content-body .wpview-wrap {
+	margin-bottom: 28px;
+}
+
+.gallery {
+	margin: 0 -1.1666667% 1.75em;
+}
+
+.gallery-item {
+	display: inline-block;
+	max-width: 33.33%;
+	padding: 0 1.1400652% 2.2801304%;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
+}
+
+.gallery-caption {
+	color: #686868;
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+
+/**
+ * 10.0 - Audio / Video
+ */
+
+embed,
+iframe,
+object,
+video {
+	margin-bottom: 1.75em;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+	margin-bottom: 0;
+}
+.wp-audio-shortcode a,
+.wp-playlist a {
+	box-shadow: none;
+}
+
+.wp-audio-shortcode,
+.wp-video,
+.mce-content-body .wp-audio-playlist {
+	margin-top: 0;
+	margin-bottom: 1.75em;
+}
+
+.mce-content-body .wp-audio-playlist {
+	padding-bottom: 0;
+}
+
+.mce-content-body .wp-playlist-tracks {
+	margin-top: 0;
+}
+
+.mce-content-body .wp-playlist-caption {
+	border-bottom: 0;
+	padding: 0.7142857143em 0;
+}
+
+.mce-content-body .wp-playlist-item-length {
+	top: 0.7142857143em;
+}
+
+/**
+ * 11.0 - Media Queries
+ */
+
+/**
+ * Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+@media screen and (min-width: 85.375em) {
+	body, 
+	button, 
+	input, 
+	select, 
+	textarea {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	.drop-cap:first-letter {
+		font-size: 120px;
+		font-size: 7.5rem;
+	}
+
+	h1,
+	.mce-content-body h1 {
+		font-size: 48px;
+		font-size: 3rem;
+	}
+
+	h2,
+	.mce-content-body h2 {
+		font-size: 36px;
+		font-size: 2.25rem;
+	}
+
+	h3,
+	.mce-content-body h3 {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
+
+	h4,
+	.mce-content-body h4 {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
+
+	h5,
+	.mce-content-body h5 {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}	
+
+	body {
+		margin: 35px 56px;
+	}
+}
+
+
+/**
+ * 12.0 - RTL
+ */
+
+.rtl blockquote {
+	border: 0 solid #1a1a1a;
+	border-right-width: 4px;
+}
+
+.rtl blockquote.alignleft,
+.rtl blockquote.alignright {
+	border: 0 solid #1a1a1a;
+	border-top-width: 4px;
+}
+
+.rtl blockquote:not(.alignleft):not(.alignright) {
+	margin-right: -28px;
+	padding: 0 24px 0 0;
+}
+
+.rtl blockquote blockquote:not(.alignleft):not(.alignright) {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.rtl li > ul,
+.rtl blockquote > ul {
+	margin-right: 20px;
+	margin-left: auto;
+}
+
+.rtl li > ol,
+.rtl blockquote > ol {
+	margin-right: 24px;
+	margin-left: auto;
+}
+
+.rtl table th,
+.rtl .mce-item-table th,
+.rtl table caption {
+	text-align: right;
+}

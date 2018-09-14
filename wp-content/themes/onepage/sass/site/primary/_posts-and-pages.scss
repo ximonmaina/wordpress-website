@@ -1,0 +1,157 @@
+/*-----------------------------
+# Singular
+------------------------------*/
+.content-area{
+    @include padding($base__spacing);
+}
+article {   
+}
+.entry-title { 
+    @include margin($small__spacing 0 0 0);
+    @include padding(0);
+}
+//entry-meta
+.page {
+    .entry-meta {
+        display: none;
+    }
+}
+.entry-meta {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    @include margin(0);
+    @include padding(0);
+    .byline {
+        margin-right: $small__spacing;
+    }
+    .posted-on {
+        margin-right: $small__spacing;
+    }
+    .edit-link {
+    }
+    &:empty {
+        display: none;
+    }
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+//entry-footer
+.entry-footer {
+    padding: 0;
+    .tags-links {
+        margin-right: $small__spacing;
+    }
+    .cat-links {
+        margin-right: $small__spacing;
+    }
+    .comments-link {
+        margin-right: $small__spacing;
+    }
+    &:empty {
+        display: none;
+    }
+}
+//content
+.entry-image {
+    margin: 0;
+    padding: 0;
+}
+.featured-img {
+    margin:0 0 $small__spacing 0;
+    @include padding(0);
+    @include border-radius(3px);
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	@include margin(0);
+    @include padding($small__spacing 0);
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 $small__spacing;
+}
+/*-----------------------------
+# Posts format
+------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+    display: none;
+}
+.format-chat .entry-content {
+    @include margin(0);
+    @include padding(0);
+}
+/*-----------------------------
+# Archives page
+------------------------------*/
+.sticky {
+
+}
+.hentry {
+	@include margin(0 null $big__spacing null);
+    @include padding(0);
+}
+.updated:not(.published){
+	display: none;
+}
+.page-header {
+    @include margin(0);
+    @include padding($base__spacing $base__spacing 0 $base__spacing);
+}
+/*-----------------------------
+# Home
+------------------------------*/
+.home {
+    .testimonials,
+    .portfolio {
+        display: block;
+        padding: $base__spacing;
+        margin:0;
+        clear: both;
+        text-align: center;
+        outline: none;
+        h2.title {
+            margin-bottom: $small__spacing;
+            &:after {
+                content: '';
+                height: 2px;
+                width: 10%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    .testimonials {
+        .ig-testimonials {
+            text-align: center;
+            padding: $small__spacing;
+            margin-bottom: $small__spacing;
+            .image{
+                margin: 0 auto!important;
+                text-align: center!important;
+                display: inline-block!important;
+                float: none!important;
+                img {
+                    border-radius: 100%;
+                    -webkit-border-radius:100%;
+                    -moz-border-radius:100%;
+                }
+            }
+
+        }
+        .page-numbers {
+            display: none;
+        }
+    }
+    .portfolio {
+        .ig-portfolio-gallery {
+            display: inline-block;
+        }
+    }
+}

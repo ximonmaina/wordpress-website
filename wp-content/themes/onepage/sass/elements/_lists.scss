@@ -1,0 +1,27 @@
+ul, ol {
+	@include margin(0 0 $small__spacing $base__spacing);
+    @include padding(0);
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	@include margin(0 0 0 $base__spacing);
+    @include padding(0);
+}
+
+dt {
+	font-weight: $font__bold;
+}
+
+dd {
+	@include margin(0);
+    @include padding(0);
+}

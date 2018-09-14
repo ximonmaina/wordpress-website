@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+@media screen and (min-width: 780px) {
+  .col2 {
+    float: left;
+    display: block;
+    margin-right: 3.57869%;
+    width: 48.21066%; }
+    .col2:last-child {
+      margin-right: 0; }
+  .omega {
+    margin-right: 0; } }
+
+.version {
+  font-size: 16px;
+  padding: 10px; }
+
+.evidence {
+  background: #fff;
+  padding: 25px;
+  border-top: 4px solid #fc3;
+  border-bottom: 4px solid #fc3;
+  border-radius: 3px;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  .evidence ul li {
+    font-size: 13px;
+    padding: 5px 0 0 0;
+    border-top: 1px dashed #eee; }
+  .evidence .button-upgrade {
+    background: #fc3;
+    border: 1px solid #e6ac00;
+    color: #5d4b16;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 30px;
+    height: 32px;
+    margin: 15px 0;
+    padding: 0 20px 1px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-shadow: 2px 2px #fd3; }
+    .evidence .button-upgrade:hover, .evidence .button-upgrade:focus {
+      background: #fd3;
+      color: #5d4b16;
+      border-color: #ffc61a; }

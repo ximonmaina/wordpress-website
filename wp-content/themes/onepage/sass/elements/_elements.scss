@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    box-sizing: inherit;
+}
+
+body {
+    background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+    overflow-x: hidden;
+}
+
+blockquote {
+    quotes: "" "";
+    border-left: 4px solid;
+    @include margin(0 0 $small__spacing 0);
+    @include padding($small__spacing);
+    p {
+        margin: 0;
+    }
+}
+q {
+    quotes: "" "";
+    font-style: italic;
+}
+hr {
+    background-color: $color__gray;
+    border: 0;
+    height: 1px;
+    margin-bottom: $base__spacing;
+}
+
+@import "lists";
+
+img {
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
+    vertical-align: middle;
+}
+
+@import "tables";
+
+@import "icons";

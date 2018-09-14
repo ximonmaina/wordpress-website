@@ -1,0 +1,27 @@
+//breadcrumb
+.breadcrumb {
+    display: inline-block;
+    width: 100%;
+    @include margin(0);
+    @include padding($base__spacing);
+    .current {
+        padding: 0;
+        display: inline-block;        
+    }
+    a {
+        @extend .current;
+        &::after {
+            content:"/";
+            margin: 0 5px;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        li {
+            display: inline-block;
+        }
+    }
+}

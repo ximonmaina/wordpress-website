@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    margin-bottom: $small__spacing;
+    th {
+        @include margin(0);
+        @include padding($small__spacing $small__spacing/2);
+        text-align: left;
+    }
+    td {
+        @include margin(0);
+        @include padding($small__spacing/2);
+    }
+}

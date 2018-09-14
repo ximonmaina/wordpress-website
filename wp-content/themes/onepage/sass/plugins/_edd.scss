@@ -1,0 +1,36 @@
+.edd_download_columns_3 {
+    .edd_download {
+        @include span_columns(4);
+         @include omega(3n);
+      }
+}
+//download button
+.edd-submit,
+#edd-purchase-button,
+input[type="submit"].edd-submit {
+            @extend button;
+            background: $color__background-button;
+            border-color: $color__border-button;
+            color:#fff;
+            &:hover,
+            &:focus {
+            }
+        }
+
+//checkout 
+.edd-checkout {
+    .entry-header {
+        display: none;
+    }
+    #edd_checkout_cart {
+        @extend table;
+    }
+}
+@include media(max-width 600px) { 
+    .edd_download_columns_3 {
+        .edd_download {
+            width: 100%!important;
+        }
+        
+    }
+}

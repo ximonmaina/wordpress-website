@@ -1,0 +1,117 @@
+//center header
+@include media(769px) {
+    .site-header {
+        .header-content {
+            //header navigation
+            .header-nav {
+                &.center {
+                    margin:0 -99em;
+                    padding:0 99em;
+                    clear: both;
+                    ul {
+                        list-style: none;
+                        text-align: center;
+                        margin: 0 $base__spacing;
+                        li {
+                            *display: inline;
+                            display: inline-block;
+                            a {
+                                display: block;
+                                @include padding($small__spacing);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-navigation {
+        &.center {
+        margin:0 -99em;
+        padding:0 99em;
+        //first
+            ul {
+                margin-bottom: 0;
+                margin-left: 0;
+                margin-right: 0;
+                text-align: center;
+                li:hover > ul,
+                li.focus > ul {
+                    left: 0;
+                    right: auto;
+                }
+                //second level
+                ul {
+                    text-align: left;
+                    float: left;
+                    position: absolute;
+                    top: 100%;
+                    left: -999em;
+                    z-index: 99999;
+                    &:after {
+                        content: none;
+                    }
+                    li {
+                        &:hover > ul,
+                        &.focus > ul {
+                            left: 100%;
+                            width: 100%;
+                            margin-top: 0;
+                        }
+                    }
+                    ul {
+                        left: -999em;
+                        top: 0;
+                    }
+                    //children
+                    .menu-item-has-children > a:after {
+                        font-family: 'simple-line-icons';
+                        content: "\e606";
+                        position: relative;
+                        float: right;
+                        @include opacity(.5);
+                    }
+                }
+            }
+        }
+    }
+}
+@include media(max-width 768px) {
+    .header-nav {
+        &.center {
+            ul {
+                list-style: none;
+                text-align: center;
+                margin: 0 $base__spacing;
+                li {
+                    *display: inline;
+                    display: inline-block;
+                    a {
+                        display: block;
+                        @include padding($small__spacing);
+                    }
+                }
+            }
+            .site-description {
+                display: block;
+                @include padding($small__spacing);
+            }
+        }
+    }
+    .main-navigation {
+        &.center {
+            text-align: center;
+            ul {
+                ul {
+                    background: none;
+                }
+            }
+        }
+    }
+    /* Small menu. */
+    &.center {
+        .menu-toggle {
+            @include margin(0 auto);
+        }
+    }
+}

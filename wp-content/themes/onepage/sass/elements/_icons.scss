@@ -1,0 +1,125 @@
+//post formats
+.format-quote .entry-title:before,
+.format-video .entry-title:before,
+.format-image .entry-title:before,
+.format-link .entry-title:before,
+.format-gallery .entry-title:before,
+.format-audio .entry-title:before,
+.format-status .entry-title:before,
+.format-chat .entry-title:before,
+.sticky .entry-title:before {
+    font-family: 'simple-line-icons';
+    font-size: 18px;
+    width:28px;
+    width: 30px;
+    height: 30px;
+    line-height: 48px;
+    text-align: center;
+    float: right;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.format-quote .entry-title:before {
+    content:"\e02c";
+}
+.format-video .entry-title:before {
+    content:"\e03a";
+}
+.format-image .entry-title:before {
+    content:"\e07f";
+}
+.format-link .entry-title:before {
+    content:"\e08d";
+}
+.format-gallery .entry-title:before {
+    content:"\e034";
+}
+.format-audio .entry-title:before {
+    content:"\e061";
+}
+.format-status .entry-title:before {
+    content:"\e021";
+}
+.format-chat .entry-title:before {
+    content:"\e04a";
+}
+.sticky .entry-title:before {
+    content:"\e031";
+}
+//meta
+.entry-meta, .entry-footer {
+    .posted-on:before {
+        font-family: 'simple-line-icons';
+        content:"\e031";
+        margin-right: $small__spacing/2;
+    }
+    .byline:before {
+        font-family: 'simple-line-icons';
+        content:"\e005";
+        margin-right: $small__spacing/2;
+    }
+    .comments-link:before {
+        font-family: 'simple-line-icons';
+        content:"\e07d";
+        margin-right: $small__spacing/2;
+    }
+   /* .cat-links:before {
+        font-family: 'simple-line-icons';
+        content:"\e089";
+        margin-right: $small__spacing/2;
+    }
+    .tags-links:before {
+        font-family: 'simple-line-icons';
+        content:"\e055";
+        margin-right: $small__spacing/2;
+    }
+ */
+}
+/***
+.widget_archive h3.widget-title:before, .widget_calendar h3.widget-title:before,
+.widget_categories h3.widget-title:before, .widget_igthemes_recent_posts_widget h3.widget-title:before,
+.widget_meta h3.widget-title:before, .widget_nav_menu h3.widget-title:before,
+.widget_recent_comments h3.widget-title:before, .widget_recent_entries h3.widget-title:before,
+.widget_search h3.widget-title:before, .widget_tag_cloud h3.widget-title:before,
+.widget_text h3.widget-title:before {
+    font-family: 'simple-line-icons';
+    margin-right: 5px;
+}
+//icons
+.widget_archive h3.widget-title:before {
+    content: "\e03f";
+}
+
+.widget_categories h3.widget-title:before {
+    content: "\e039";
+}
+
+.widget_recent_comments h3.widget-title:before {
+    content: "\e04a";
+}
+
+.widget_recent_entries h3.widget-title:before {
+    content: "\e085";
+}
+
+.widget_calendar h3.widget-title:before {
+    content: "\e075";
+}
+
+.widget_nav_menu h3.widget-title:before {
+    content: "\e08d";
+}
+
+.widget_tag_cloud h3.widget-title:before {
+    content: "\e055";
+}
+
+.widget_search h3.widget-title:before {
+    content: "\e090";
+}
+
+.widget_text h3.widget-title:before {
+    content: "\e060";
+}
+**/

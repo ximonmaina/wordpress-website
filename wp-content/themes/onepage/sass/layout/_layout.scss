@@ -1,0 +1,48 @@
+@include media(769px) {
+    .site-content {
+        @include outer-container;
+        display: block;
+        clear: both;
+    }
+    .content-area {
+        @include span-columns(8,block-collapse);
+    }
+    .widget-area {
+        @include span-columns(4,block-collapse);
+    }
+    .sidebar-left {
+        .content-area {
+            @include span-columns(8,block-collapse);
+            float:right;
+        }
+        .widget-area {
+            @include span-columns(4,block-collapse);
+            float: left;
+        }
+    }
+    .page-template-page-focus {
+            .content-area {
+                @include span-columns(10);
+                @include shift(1);
+            }
+        }
+    .sidebar-left .full-width,
+    .full-width {
+        .content-area {
+            @include span-columns(12 of 12);
+            @include shift(0);
+        }
+    }
+}
+.site-content {
+    @include margin(0 null);
+    @include padding(0);
+}
+.page-template-elementor,
+.page-template-beaver-builder {
+    .site-content {
+        @include outer-container(100%);
+        width:100%;
+        padding: 0;
+    }
+}

@@ -1,0 +1,114 @@
+//inline header
+@include media(769px) {
+    .site-header {
+        .header-content {
+            .site-branding {
+                &.inline {
+                    @include span-columns(6);
+                    @include padding($base__spacing);
+                    float: left;
+                }
+            }
+            //header navigation
+            .header-nav {
+                &.inline {
+                    @include span-columns(6);
+                    @include omega();
+                    float: right;
+                    ul {
+                        list-style: none;
+                        text-align: right;
+                        margin: $big__spacing $base__spacing;
+                        li {
+                            *display: inline;
+                            display: inline-block;
+                            a {
+                                display: block;
+                                @include padding($small__spacing 0 $small__spacing $small__spacing);
+                            }
+                        }
+                    }
+                    .site-description {
+                        display: block;
+                        @include padding($small__spacing $small__spacing $small__spacing 0);
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+    .main-navigation {
+        &.inline {
+            margin:0 -99em;
+            padding:0 99em;
+            clear: both;
+            ul {
+                margin: 0;
+                text-align: center;
+                li:hover > ul,
+                li.focus > ul {
+                    left: 0;
+                    right: auto;
+                }
+                //second level
+                ul {
+                    margin-bottom: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                    float: left;
+                    position: absolute;
+                    top: 100%;
+                    right: -999em;
+                    z-index: 99999;
+                    text-align: left;
+                    li {
+                        &:hover > ul,
+                        &.focus > ul {
+                            left: 100%;
+                            width: 100%;
+                            top: 0;
+                            margin-top: 0;
+                        }
+                    }
+                    //children
+                    .menu-item-has-children > a:after {
+                        font-family: 'simple-line-icons';
+                        content: "\e606";
+                        position: relative;
+                        float: right;
+                        @include opacity(.5);
+                    }
+                }
+            }
+        }
+    }
+}
+@include media(max-width 768px) {
+    .site-branding {
+        &.inline {
+            @include span-columns(12);
+            @include padding($base__spacing);
+            @include margin(0);
+            float: left;
+        }
+     }
+    .header-nav {
+        &.inline {
+            @include span-columns(12);
+            @include padding(0);
+            ul {
+                list-style: none;
+                margin: $base__spacing 0 0 $base__spacing;
+                li {
+                    *display: inline;
+                    display: inline-block;
+                    a {
+                        display: block;
+                        @include margin(0 $small__spacing 0 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
